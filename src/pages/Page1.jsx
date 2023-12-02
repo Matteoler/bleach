@@ -6,12 +6,20 @@ const StyledPage = styled.div`
 `;
 
 
-function Page1(props) {
+function Header() {
     return (
         <StyledPage>
-            <h1>Je suis page1</h1>
+            <h1>Bleach</h1>
         </StyledPage>
     );
 }
 
-export default Page1;
+function Description() {
+    return (
+        <StyledPage>
+            <h1>Le manga Bleach</h1>
+        </StyledPage>
+    );
+}
+
+export default Header;
