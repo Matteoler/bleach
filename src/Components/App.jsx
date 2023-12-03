@@ -1,19 +1,19 @@
-import './Library.scss'
+import '../styles/Library.scss'
 import React from "react";
 import {
   Routes,
   Route,
 } from "react-router-dom";
 
-import Page1 from './pages/Page1';
-import Home from './Home';
+import Home from './Home.jsx';
+import Card from "./Card.jsx";
 
 function App() {
 
   return (
     <Routes>
       <Route path="/" exact element={<Home />}/>
-      <Route path="/page1" element={<Page1 />}/>
+        <Route path="/Card" element={<Card />}/>
    </Routes>
   )
 }
