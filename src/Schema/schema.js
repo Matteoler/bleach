@@ -6,13 +6,23 @@ const typeDefs = gql`
     NomPerso: String
     Zampakuto: String
     description: String
-    idCateg: Int
     imgPerso: String
     persoPrincipal: Boolean
+    Categorie: [Categorie]!
+  }
+  
+  type Categorie {
+    idCateg: ID
+    nomCateg: String
+    characters: [Character]
   }
 
   type Query {
     characters: [Character]
+    Perso(idPerso: ID!): [Character]
+    Categories: [Categorie]
+    Categorie(idCateg: ID!): [Categorie]
+    getcategbyid(idCateg: ID!): [Categorie]
   }
 `;
 

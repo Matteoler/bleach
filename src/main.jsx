@@ -15,7 +15,7 @@ import CharacterPage from './Pages/Infoperso.jsx';
 const rootElement = document.getElementById('root');
 
 const client = new ApolloClient({
-    uri: 'http://localhost:4000/graphql', // Remplacez par l'URL de votre serveur GraphQL
+    uri: 'http://localhost:4000/', // Remplacez par l'URL de votre serveur GraphQL
     cache: new InMemoryCache(),
 });
 
@@ -28,7 +28,7 @@ ReactDOM.createRoot(rootElement).render(
                     <Route path="/" element={<Home />} />
                     <Route path="/LogIn" element={<LogIn />} />
                     <Route path="/arcs/:name" element={<Arcs />} />
-                    <Route path="/character/:id" element={<CharacterPage />} />
+                    <Route path="/character/:characterId" element={<CharacterPage />} />
                     <Route path="*" element={<Error />} />
                 </Routes>
             </Router>

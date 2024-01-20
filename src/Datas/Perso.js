@@ -1,4 +1,4 @@
-// Dans votre fichier client (par exemple, typeDefs.js)
+// Dans votre fichier client (par exemple, schema.js)
 import { gql } from '@apollo/client';
 
 export const GET_ALL_CHARACTERS = gql`
@@ -8,7 +8,6 @@ export const GET_ALL_CHARACTERS = gql`
       NomPerso
       Zampakuto
       description
-      idCateg
       imgPerso
       persoPrincipal
     }
@@ -16,13 +15,12 @@ export const GET_ALL_CHARACTERS = gql`
 `;
 
 export const GET_PERSONNAGE_BY_ID = gql`
-  query GetPersonnageById($id: ID!) {
-    character(id: $id) {
+  query GetPersonnageById($idPerso: ID!) {
+    Perso(idPerso: $idPerso) {
       idPerso
       NomPerso
       Zampakuto
       description
-      idCateg
       imgPerso
       persoPrincipal
     }

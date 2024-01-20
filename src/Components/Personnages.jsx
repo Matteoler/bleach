@@ -4,36 +4,20 @@ import { Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import {GET_ALL_CHARACTERS} from '../Datas/Perso.js';
 
-const HoverContent = () => {
-    return (
-        <Query query={GET_ALL_CHARACTERS}>
-            {({ loading, error, data }) => {
-                if (loading) return <p>Loading...</p>;
-                if (error) return <p>Error: {error.message}</p>;
+const HoverContent = ({ Perso }) => {
 
-                return (
-                    <div className="hoverContent">
-                        {data.characters.map((Perso) => {
-                            // Define PersoImage within the map function
-                            const PersoImage = require(`../Assets/${Perso.imgPerso}`).default;
-
-                            return (
-                                <Link key={Perso.idPerso} to={`/character/${Perso.idPerso}`}>
-                                    <img
-                                        src={PersoImage}
-                                        alt={Perso.NomPerso}
-                                        className="imagePerso"
-                                    />
-                                </Link>
-                            );
-                        })}
-                    </div>
-                );
-            }}
-        </Query>
-    );
-};
-
+        return (
+            <div className="hoverContent">
+                <Link to={`/character/${Perso.idPerso}`}>
+                    <img
+                        src={`/src/Assets/${Perso.imgPerso}`}
+                        alt={Perso.NomPerso}
+                        className="imagePerso"
+                    />
+                </Link>
+            </div>
+        );
+    };
 
 const StylePerso = styled.div`
     ul {
