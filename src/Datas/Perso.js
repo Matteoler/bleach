@@ -2,14 +2,15 @@
 import { gql } from '@apollo/client';
 
 export const GET_ALL_CHARACTERS = gql`
-  query GetAllCharacters {
+  query Characters {
     characters {
-      idPerso
       NomPerso
-      Zampakuto
-      description
-      imgPerso
       persoPrincipal
+      idPerso
+      imgPerso
+      Categorie {
+        nomCateg
+      }
     }
   }
 `;

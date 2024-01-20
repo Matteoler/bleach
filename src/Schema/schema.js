@@ -21,7 +21,6 @@ const typeDefs = gql`
     characters: [Character]
     Perso(idPerso: ID!): [Character]
     Categories: [Categorie]
-    Categorie(idCateg: ID!): [Categorie]
     getcategbyid(idCateg: ID!): [Categorie]
   }
 `;

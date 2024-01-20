@@ -1,8 +1,7 @@
-export const Character = {
-    Categorie: async (parent, args, context) => {
-        const { createDbConnection } = context;
-        console.log('createDbConnection:', createDbConnection);
+import {createDbConnection} from "./resolver.mjs";
 
+export const Character = {
+    Categorie: async (parent) => {
         const db = createDbConnection();
         try {
             // Retrieve a specific character by ID from the MySQL database
