@@ -8,6 +8,7 @@ export const GET_ALL_CHARACTERS = gql`
       persoPrincipal
       idPerso
       imgPerso
+      imgPerso2
       Categorie {
         nomCateg
       }
@@ -23,6 +24,7 @@ export const GET_PERSONNAGE_BY_ID = gql`
       Zampakuto
       description
       imgPerso
+      imgPerso2
       persoPrincipal
     }
   }

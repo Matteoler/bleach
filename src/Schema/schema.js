@@ -7,6 +7,7 @@ const typeDefs = gql`
     Zampakuto: String
     description: String
     imgPerso: String
+    imgPerso2: String
     persoPrincipal: Boolean
     Categorie: Categorie!
   }

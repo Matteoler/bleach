@@ -13,7 +13,7 @@ import {createDbConnection} from "./src/Datas/resolver.mjs";
         Categorie
     };
 
-        const server = new ApolloServer({ typeDefs, resolvers,context : {createDbConnection} });
+        const server = new ApolloServer({ typeDefs, resolvers });
 
         const { url } = await startStandaloneServer(server, {
             listen: { port: 4000 },
