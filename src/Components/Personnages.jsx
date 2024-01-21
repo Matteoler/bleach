@@ -137,11 +137,10 @@ function Personnages() {
                         className="card"
                         onMouseEnter={() => handleHover(Perso.idPerso)}
                         onMouseLeave={handleLeave}
-                        console={console.log(Perso)}
                     >
                         {hoveredId === Perso.idPerso && <HoverContent Perso={Perso} />}
                         <label className="nomPerso">{Perso.NomPerso}</label>
-                        <label className="categPerso">{Perso.Categorie && Perso.Categorie[0] ? Perso.Categorie[0].nomCateg : 'Unknown Category'}</label>
+                        <label className="categPerso">{Perso.Categorie.nomCateg}</label>
                     </StyleListe>
                 ))}
             </ul>

@@ -11,8 +11,7 @@ const CharacterComponent = ({ characterId }) => {
     if (error) return <p>Error loading data: {error.message}</p>;
 
     const { Perso } = data || {};
-    const selectedCharacter = Perso && Perso[0];
-    const { idPerso, NomPerso, Zampakuto, description, imgPerso, persoPrincipal } = selectedCharacter || {};
+    const { idPerso, NomPerso, Zampakuto, description, imgPerso, persoPrincipal } = Perso || {};
 
 
     return (

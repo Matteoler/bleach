@@ -8,7 +8,7 @@ const typeDefs = gql`
     description: String
     imgPerso: String
     persoPrincipal: Boolean
-    Categorie: [Categorie]!
+    Categorie: Categorie!
   }
   
   type Categorie {
@@ -19,9 +19,9 @@ const typeDefs = gql`
 
   type Query {
     characters: [Character]
-    Perso(idPerso: ID!): [Character]
+    Perso(idPerso: ID!): Character
     Categories: [Categorie]
-    getcategbyid(idCateg: ID!): [Categorie]
+    getcategbyid(idCateg: ID!): Categorie
   }
 `;
 
