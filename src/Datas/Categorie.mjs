@@ -3,7 +3,7 @@ import {createDbConnection} from "./resolver.mjs";
 export const Categorie = {
     characters: async (parent) => {
 
-        const [results, fields] = await createDbConnection.execute(
+        const [results] = await createDbConnection.execute(
             'SELECT * FROM personnage WHERE idCateg = ?', [parent.idCateg]
         );
 

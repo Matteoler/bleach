@@ -12,19 +12,25 @@ const CharacterComponent = ({ characterId }) => {
     if (error) return <p>Error loading data: {error.message}</p>;
 
     const { Perso } = data || {};
-    const { NomPerso, Zampakuto, description, imgPerso2 } = Perso || {};
+    const { NomPerso, Zampakuto, Anniversaire, Hauteur , description, imgPerso2 } = Perso || {};
 
     const DivPerso = styled.div`
 
-        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
         
         .imagePerso {
+            grid-column: 2;
+            grid-row: 2/4;
             width: 20.8125rem;
             height: 34.6875rem;
             
         }
         
         .Zampakuto {
+            grid-column: 1;
+            grid-row: 2;
             display: flex;
             width: 32.1875rem;
             padding: 1.3125rem 1.8125rem;
@@ -45,7 +51,8 @@ const CharacterComponent = ({ characterId }) => {
         }
         
         .nomPerso {
-            font-family: "DM Serif Text";
+            grid-column: 2;
+            font-family: "DM Serif Text",serif;
             font-size: 2.625rem;
             font-style: normal;
             font-weight: 400;
@@ -55,6 +62,9 @@ const CharacterComponent = ({ characterId }) => {
     return (
         <DivPerso>
             <h2 className="nomPerso">{NomPerso}</h2>
+
+            <p className="Anniversaire">Zampakuto: {Anniversaire}</p>
+            <p className="Hauteur">Zampakuto: {Hauteur}</p>
             <img
                 src={`/src/Assets/${imgPerso2}`}
                 alt={NomPerso}

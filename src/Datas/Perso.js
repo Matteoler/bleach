@@ -23,6 +23,8 @@ export const GET_PERSONNAGE_BY_ID = gql`
       NomPerso
       Zampakuto
       description
+      Hauteur
+      Anniversaire
       imgPerso
       imgPerso2
       persoPrincipal
