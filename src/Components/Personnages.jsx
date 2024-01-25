@@ -10,7 +10,7 @@ const HoverContent = ({ Perso }) => {
             <div className="hoverContent">
                 <Link to={`/character/${Perso.idPerso}`}>
                     <img
-                        src={`/Assets/${Perso.imgPerso}`}
+                        src={`../Assets/${Perso.imgPerso}`}
                         alt={Perso.NomPerso}
                         className="imagePerso"
                     />
